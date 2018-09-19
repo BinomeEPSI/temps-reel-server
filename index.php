@@ -42,7 +42,8 @@ function player($k) {
 }
 
 $verb = $_SERVER['REQUEST_METHOD'];
-$req = explode('/', $_REQUEST['r']);
+$uri_request = substr($_SERVER['REQUEST_URI'], 0, strpos($_SERVER['REQUEST_URI'], "By"));
+$req = explode('/', $uri_request);
 
 if(!$su && !isset($keys[$_REQUEST['k']])) {
     err(400, "Bad requet, no or bad k");
