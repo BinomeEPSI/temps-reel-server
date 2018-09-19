@@ -1,0 +1,12 @@
+version: "3.1"
+
+services:
+  
+  nginx_php:
+    container_name: nginx_php
+    image: "skiychan/nginx-php7"
+    volumes:
+        - .:/data/www:rw
+        - ./vhosts:/usr/local/nginx/conf/vhost:rw
+    ports:
+      - 8080:80
