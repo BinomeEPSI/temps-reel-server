@@ -1,5 +1,8 @@
 <?php
-require_once("keys.php");
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
+require_once("../keys.php");
 
 $start = time();
 $su = isset($_REQUEST['k']) && md5($_REQUEST['k']) == 'f1c1592588411002af340cbaedd6fc33';
