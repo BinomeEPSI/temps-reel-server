@@ -8,6 +8,9 @@ require_once("../../func.php");
 $start = time();
 $su = isset($_REQUEST['k']);
 
+define ("V_GET" , "GET");
+define ("V_DELETE" , "DELETE");
+
 $verb = $_SERVER['REQUEST_METHOD'];
 $uri_request = substr($_SERVER['REQUEST_URI'], 0, strpos($_SERVER['REQUEST_URI'], "?"));
 $req = array_slice(explode('/', $uri_request), 2);

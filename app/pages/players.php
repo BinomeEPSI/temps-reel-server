@@ -1,6 +1,7 @@
 <?php
+
 switch($verb) {
-    case 'GET':
+    case V_GET:
         if(!isset($req[1])) {
             $response = array();
             foreach(array_keys($keys) as $k) {
@@ -14,7 +15,7 @@ switch($verb) {
             err(404, "Player not found");
         }
         break;
-    case 'DELETE':
+    case V_DELETE:
         if($su) {
             foreach(array_keys($keys) as $k) {
                 msg_remove_queue(initq($k));
