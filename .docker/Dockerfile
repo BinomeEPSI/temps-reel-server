@@ -5,4 +5,10 @@ RUN usermod -u 1000 www-data
 
 RUN apt-get update
 
+RUN a2enmod rewrite
+
+RUN docker-php-ext-install sysvmsg
+RUN docker-php-ext-install sysvsem
+RUN docker-php-ext-install sysvshm
+
 WORKDIR /var/www/
