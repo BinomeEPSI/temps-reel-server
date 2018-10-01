@@ -1,8 +1,8 @@
 version: "3.1"
 
 services:
-  temps-reel-server:
-    container_name: temps-reel-server
+  temps-reel:
+    container_name: temps-reel
     image: temps-reel-server
     volumes:
       - ./app:/var/www/
