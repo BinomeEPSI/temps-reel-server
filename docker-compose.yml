@@ -4,7 +4,19 @@ services:
   temps-reel:
     container_name: temps-reel
     image: temps-reel-server
+    networks:
+     - backend
     volumes:
       - ./app:/var/www/
     ports:
       - "8080:80"
+  temps-reel-install:
+    container_name: temps-reel-install
+    image: temps-reel-install
+    networks:
+     - backend
+    volumes:
+      - ./app:/var/www/
+networks:
+  backend:
+    driver: bridge

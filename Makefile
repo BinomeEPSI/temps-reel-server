@@ -1,7 +1,8 @@
-all: install
+all: build
 
-install:
-	docker build -t temps-reel-server .docker/.
+build:
+	docker build -t temps-reel-server .docker/dist/.
+	docker build -t temps-reel-install .docker/installer/.
 up:
 	docker-compose up -d
 	
@@ -17,5 +18,11 @@ stop:
 restart:
 	docker-compose restart
 
+
+install:
+	docker-compose up -d
+	docker exec -it temps-reel-install composer install
+
 test:
-	docker exec -it temps-reel-server echo "no test available"
+	docker-compose up -d
+	docker exec -it temps-reel-install composer test
