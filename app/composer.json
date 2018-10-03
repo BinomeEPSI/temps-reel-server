@@ -1,0 +1,41 @@
+{
+	"name": "BinomeEPSI/temps-reel-server",
+	"description": "",
+	"homepage": "https://github.com/BinomeEPSI/temps-reel-server",
+	"license": "MIT",
+	"version": "0.0.1",
+	"keywords": [
+		"epsi",
+		"realtime",
+		"pong"
+	],
+	"minimum-stability": "dev",
+	"authors": [
+		{
+			"name": "oRiamn",
+			"email": "durade.romain@gmail.com"
+		},
+        {
+            "name": "Sylvain",
+            "email": "contact@sylvainmetayer.fr"
+        }
+	],
+	"scripts": {
+		"test": [
+			"phpunit"
+		]
+	},
+	"autoload": {
+		"psr-4": {
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"APIRest\\Tests\\": "tests"
+		}
+	},
+	"require-dev": {
+        "phpunit/phpunit": "^6.5",
+        "guzzlehttp/guzzle": "^6.2"
+	}
+}
