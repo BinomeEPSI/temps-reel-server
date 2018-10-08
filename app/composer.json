@@ -1,13 +1,14 @@
 {
-	"name": "BinomeEPSI/temps-reel-server",
+	"name": "EPSIBordeaux/temps-reel",
 	"description": "",
-	"homepage": "https://github.com/BinomeEPSI/temps-reel-server",
+	"homepage": "https://github.com/EPSIBordeaux/temps-reel",
 	"license": "MIT",
 	"version": "0.0.1",
 	"keywords": [
 		"epsi",
 		"realtime",
-		"pong"
+		"pong",
+		"game"
 	],
 	"minimum-stability": "dev",
 	"authors": [
