@@ -1,5 +1,7 @@
 # temps-reel-server
 
+[![CircleCI](https://circleci.com/gh/EPSIBordeaux/temps-reel.svg?style=svg)](https://circleci.com/gh/EPSIBordeaux/temps-reel)
+
 ## Requirements
 
 * Docker & docker-compose
