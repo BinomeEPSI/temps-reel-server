@@ -5,6 +5,9 @@ jobs:
       - image: circleci/php:7.1-browsers
     steps:
       - checkout
+      - run:
+         name: Install PHP dependencies
+         command: sudo docker-php-ext-install sysvmsg sysvsem sysvshm
       - run: cd app && composer install
       - run:
           name: Start Server 
@@ -21,6 +24,9 @@ jobs:
       - image: circleci/php:7.2-browsers
     steps:
       - checkout
+      - run:
+         name: Install PHP dependencies
+         command: sudo docker-php-ext-install sysvmsg sysvsem sysvshm
       - run: cd app && composer install
       - run:
           name: Start Server 
