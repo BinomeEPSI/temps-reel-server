@@ -11,7 +11,8 @@ class PlayerTest extends TestCase
 
     public function setUp()
     {
-        $this->http = new Client(['base_uri' => 'http://temps-reel/server/']);
+        $baseURL = $_ENV["baseURL"];
+        $this->http = new Client(['base_uri' => "http://${baseURL}/server/"]);
     }
 
     public function testGet()
