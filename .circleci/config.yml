@@ -3,37 +3,35 @@ jobs:
   build-v7.1:
     docker:
       - image: circleci/php:7.1-browsers
-    working_directory: ~/app
     steps:
       - checkout
-      - run: composer install
+      - run: cd app && composer install
       - run:
           name: Start Server 
-          command: composer start
+          command: cd app && composer start
           background: true
       - run:
           name: Sleep until server is up
           command: sleep 5
       - run:
           name: Test
-          command: baseURL="localhost:8080" composer test
+          command: cd app && baseURL="localhost:8080" composer test
   build-v7.2:
     docker:
       - image: circleci/php:7.2-browsers
-    working_directory: ~/app
     steps:
       - checkout
-      - run: composer install
+      - run: cd app && composer install
       - run:
           name: Start Server 
-          command: composer start
+          command: cd app && composer start
           background: true
       - run:
           name: Sleep until server is up
           command: sleep 5
       - run:
           name: Test
-          command: baseURL="localhost:8080" composer test
+          command: cd app &&  baseURL="localhost:8080" composer test
 
 workflows:
     version: 2
