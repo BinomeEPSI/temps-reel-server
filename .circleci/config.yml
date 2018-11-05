@@ -2,7 +2,7 @@ version: 2
 jobs:
   build-v7.1:
     docker:
-      - image: circleci/php:7.1-browsers
+      - image: circleci/php:7.2-browsers
     steps:
       - checkout
       - run:
