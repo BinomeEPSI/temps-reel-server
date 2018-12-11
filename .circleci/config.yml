@@ -38,10 +38,30 @@ jobs:
       - run:
           name: Test
           command: cd app &&  baseURL="localhost:8080" composer test
+  build-v7.3:
+    docker:
+      - image: circleci/php:7.3-browsers
+    steps:
+      - checkout
+      - run:
+         name: Install PHP dependencies
+         command: sudo docker-php-ext-install sysvmsg sysvsem sysvshm
+      - run: cd app && composer install
+      - run:
+          name: Start Server 
+          command: cd app && composer start
+          background: true
+      - run:
+          name: Sleep until server is up
+          command: sleep 5
+      - run:
+          name: Test
+          command: cd app &&  baseURL="localhost:8080" composer test
 
 workflows:
     version: 2
     build:
         jobs:
+            - build-v7.3
             - build-v7.2
             - build-v7.1
