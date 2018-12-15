@@ -2,7 +2,7 @@ version: 2
 jobs:
   build-v7.1:
     docker:
-      - image: circleci/php:7.2-browsers
+      - image: circleci/php:7.3-browsers
     steps:
       - checkout
       - run:
@@ -21,7 +21,7 @@ jobs:
           command: cd app && baseURL="localhost:8080" composer test
   build-v7.2:
     docker:
-      - image: circleci/php:7.2-browsers
+      - image: circleci/php:7.3-browsers
     steps:
       - checkout
       - run:
