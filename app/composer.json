@@ -44,7 +44,7 @@
 		"ext-sysvsem": "*"
 	},
 	"require-dev": {
-        "phpunit/phpunit": "7.4.3",
+        "phpunit/phpunit": "7.5.14",
         "guzzlehttp/guzzle": "6.3.3"
 	}
 }
